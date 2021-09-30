@@ -5,9 +5,9 @@ public class PDFGenerationService {
         EmailTemplate attachTemplate = EmailTemplateSelector.getEmailTemplate('Profile');
 		if(attachTemplate!=null && coverTemplate!=null)
         {
-            Map<String, String> ncParams=new Map<String, String> {'{name}' => 'Dhanik'};
+            Map<String, String> ncParams=new Map<String, String> {'{name}' => 'Divya'};
             Messaging.EmailFileAttachment attach = EmailHelper.attachementBuilder('WelcomeLetter.pdf',attachTemplate.HtmlValue,null);
-           	Messaging.SingleEmailMessage mail=EmailHelper.emailBuilder('dhanik.sahni@gmail.com',coverTemplate.Subject,coverTemplate.HtmlValue,ncParams);
+           	Messaging.SingleEmailMessage mail=EmailHelper.emailBuilder('divya@gmail.com',coverTemplate.Subject,coverTemplate.HtmlValue,ncParams);
             // Send the email
             // 
 	        mail.setFileAttachments(new Messaging.EmailFileAttachment[] { attach}); 
